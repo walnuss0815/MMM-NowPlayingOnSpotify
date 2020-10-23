@@ -67,3 +67,7 @@ progress[value].NPOS_progress::-webkit-progress-bar {
 progress[value].NPOS_progress::-webkit-progress-value {
   background-color: #aaaaaa;
 }
+
+.MMM-NowPlayingOnSpotify {
+  width: 300px;
+}
