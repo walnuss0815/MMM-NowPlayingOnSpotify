@@ -7,9 +7,7 @@ class NPOS_DomBuilder {
   }
 
   getDom(context) {
-    if (context.noSong) {
-      return this.getWrapper(this.getNothingIsPlayingContent());
-    } else {
+    if (!context.noSong) {
       return this.getWrapper(this.getPlayingContent(context));
     }
   }
@@ -37,18 +35,6 @@ class NPOS_DomBuilder {
     content.appendChild(loadingDiv);
 
     return content;
-  }
-
-  getNothingIsPlayingContent() {
-    let content = document.createElement('div');
-    content.className = 'NPOS_nothingIsPlayingContent';
-    content.appendChild(this.getLogoImage());
-
-    return content;
-  }
-
-  getLogoImage() {
-    return this.getImage('img/Spotify_Logo_RGB_White.png', 'NPOS_nothingIsPlayingImage');
   }
 
   getIconImage(className) {
